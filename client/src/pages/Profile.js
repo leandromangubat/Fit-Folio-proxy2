@@ -8,6 +8,7 @@ import SessionList from "../components/SessionList";
 import { QUERY_USER, QUERY_ME } from "../utils/queries";
 
 import Auth from "../utils/auth";
+import "../index.css";
 
 const Profile = () => {
   const { username: userParam } = useParams();
@@ -36,10 +37,10 @@ const Profile = () => {
   }
 
   return (
-    <div>
+    <div className="profile-container">
       <div className="flex-row justify-center mb-3">
         <h2 className="col-12 col-md-10 orange text-dark p-3 mb-5">
-          Viewing {userParam ? `${user.username}'s` : "your"} profile.
+          VIEWING {userParam ? `${user.username}'s` : "YOUR"} PROFILE:
         </h2>
 
         <div className="col-12 col-md-10 mb-5"></div>
