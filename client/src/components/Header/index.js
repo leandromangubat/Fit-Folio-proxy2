@@ -2,20 +2,27 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import Auth from "../../utils/auth";
+import logoImage from "../../assets/logo.png";
 
 const Header = () => {
   const logout = (event) => {
     event.preventDefault();
     Auth.logout();
   };
+
+  const headerStyle = {
+    backgroundColor: "rgba(255, 255, 255, 0.3)", // Set the background color to lightcyan
+    color: "black", // Set the text color to black for better contrast
+    height: "130px",
+  };
+
   return (
-    <header className="orange text-light mb-4 py-3 flex-row align-center">
+    <header style={headerStyle} className="mb-4 py-3 flex-row align-center">
       <div className="container flex-row justify-space-between-lg justify-center align-center">
-        <div>
+        <div className="logo-container">
           <Link className="text-light" to="/">
-            <h1 className="m-0">Fit-Folio</h1>
+            <img src={logoImage} alt="Logo" className="logo" />
           </Link>
-          <p className="m-0">Lets get physical!</p>
         </div>
         <div>
           {Auth.loggedIn() ? (
