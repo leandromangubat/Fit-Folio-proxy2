@@ -6,6 +6,7 @@ import WorkoutList from "../components/WorkoutList";
 import WorkoutForm from "../components/WorkoutForm";
 
 import { QUERY_SINGLE_SESSION } from "../utils/queries";
+import "../index.css";
 
 const SingleSession = () => {
   const { sessionId } = useParams();
@@ -22,24 +23,20 @@ const SingleSession = () => {
 
   return (
     <div className="single-session-container">
-      <div className="session-header bg-dark text-light p-3">
-        <h3 className="session-author">
-          {session.sessionAuthor} <br />
-          <span className="session-created-at">
-            Created session at {session.createdAt}
-          </span>
-        </h3>
+      <div className="session-header">
+        <h3 className="session-author">{session.sessionAuthor}</h3>
+        <span className="session-created-at">
+          Created session at {session.createdAt}
+        </span>
       </div>
-      <div className="session-content bg-white py-4">
-        <blockquote className="session-text p-4">
-          <span className="session-text-bg">{session.sessionText}</span>
-        </blockquote>
+      <div className="session-content">
+        <blockquote className="session-text">{session.sessionText}</blockquote>
       </div>
 
-      <div className="workout-list-container mt-5">
+      <div className="workout-list-container">
         <WorkoutList workouts={session.workouts} />
       </div>
-      <div className="workout-form-container mt-3 mb-5">
+      <div className="workout-form-container">
         <WorkoutForm sessionId={session._id} />
       </div>
     </div>

@@ -1775,3 +1775,56 @@ label form [type="radio"] {
 .session-link {
   margin-top: 10px;
 }
+
+.single-session-container {
+  background-color: rgba(245, 245, 245, 0.4);
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+}
+
+.session-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  color: White;
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+}
+
+.session-author {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.session-created-at {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.session-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 0 0 8px 8px;
+  border-top: 1px solid #ddd;
+}
+
+.session-text {
+  font-size: 16px;
+  line-height: 1.5;
+  border-left: 4px solid #3498db;
+  padding-left: 12px;
+  margin: 0;
+}
+
+.workout-list-container {
+  margin-top: 20px;
+}
+
+.workout-form-container {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
