@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
-
 import Auth from "../utils/auth";
 
 const Signup = () => {
@@ -25,7 +23,6 @@ const Signup = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    console.log(formState);
 
     try {
       const { data } = await addUser({
@@ -40,27 +37,31 @@ const Signup = () => {
 
   return (
     <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
+      <div className="col-12 col-lg-6">
         <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
+          <h4 className="card-header bg-dark text-light p-2 text-center">
+            SIGN UP
+          </h4>
           <div className="card-body">
             {data ? (
-              <p>
+              <p className="text-success text-center">
                 Success! You may now head{" "}
-                <Link to="/">back to the homepage.</Link>
+                <Link to="/" className="text-primary">
+                  back to the homepage.
+                </Link>
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
                 <input
-                  className="form-input"
+                  className="form-input mb-3"
                   placeholder="Your username"
                   name="username"
                   type="text"
-                  value={formState.name}
+                  value={formState.username}
                   onChange={handleChange}
                 />
                 <input
-                  className="form-input"
+                  className="form-input mb-3"
                   placeholder="Your email"
                   name="email"
                   type="email"
@@ -68,7 +69,7 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <input
-                  className="form-input"
+                  className="form-input mb-3"
                   placeholder="******"
                   name="password"
                   type="password"
@@ -80,13 +81,13 @@ const Signup = () => {
                   style={{ cursor: "pointer" }}
                   type="submit"
                 >
-                  Submit
+                  SIGN UP
                 </button>
               </form>
             )}
 
             {error && (
-              <div className="my-3 p-3 bg-danger text-white">
+              <div className="my-3 p-3 bg-danger text-white text-center">
                 {error.message}
               </div>
             )}
