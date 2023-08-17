@@ -1797,6 +1797,7 @@ label form [type="radio"] {
 .session-author {
   font-size: 18px;
   font-weight: bold;
+  text-transform: uppercase;
   margin: 0;
 }
 
