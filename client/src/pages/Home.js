@@ -9,7 +9,7 @@ import { QUERY_SESSIONS } from "../utils/queries";
 const Home = () => {
   const { loading, data } = useQuery(QUERY_SESSIONS);
   const sessions = data?.sessions || [];
-
+  // comment //
   return (
     <main>
       <div className="flex-row justify-center">
