@@ -12,13 +12,13 @@ import "../index.css";
 
 const Profile = () => {
   const { username: userParam } = useParams();
-
   const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
     variables: { username: userParam },
   });
 
   const user = data?.me || data?.user || {};
-  // navigate to personal profile page if username is yours
+
+  // Navigate to personal profile page if username is yours
   if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
     return <Navigate to="/me" />;
   }
@@ -38,27 +38,26 @@ const Profile = () => {
 
   return (
     <div className="profile-container">
-      <div className="flex-row justify-center mb-3">
-        <h2 className="col-12 col-md-10 orange text-dark p-3 mb-5">
+      <div className="col-12 col-md-10 orange text-dark p-3 mb-5">
+        <h2 className="mb-0">
           VIEWING {userParam ? `${user.username}'s` : "YOUR"} PROFILE:
         </h2>
-
-        <div className="col-12 col-md-10 mb-5"></div>
-        {!userParam && (
-          <div
-            className="col-12 col-md-10 mb-3 p-3 orange"
-            style={{ border: "1px" }}
-          >
-            <SessionForm />
-            <SessionList
-              sessions={user.sessions}
-              title={`${user.username}'s Sessions`}
-              showTitle={false}
-              showUsername={false}
-            />
-          </div>
-        )}
       </div>
+
+      {!userParam && (
+        <div className="col-12 col-md-10 p-3 orange border">
+          <div className="d-flex justify-content-between align-items-center mb-3">
+            <h3 className="mb-0">Welcome, {user.username}!</h3>
+            <SessionForm />
+          </div>
+          <SessionList
+            sessions={user.sessions}
+            title={`${user.username}'s Sessions`}
+            showTitle={false}
+            showUsername={false}
+          />
+        </div>
+      )}
     </div>
   );
 };
