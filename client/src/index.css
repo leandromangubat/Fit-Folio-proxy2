@@ -1,6 +1,5 @@
 :root {
   --font-family: "Roboto", sans-serif;
-  background-color: wheat;
 }
 
 html {
@@ -437,7 +436,6 @@ a {
 
 a:hover {
   color: #065b83;
-  text-decoration: underline;
 }
 
 /* HEIGHT / WIDTH UTILS */
@@ -887,43 +885,43 @@ a:hover {
 }
 
 .text-right {
-  text-align: right !important;
+  text-align: right;
 }
 
 .text-primary {
-  color: #2d3e50 !important;
+  color: #2d3e50;
 }
 
 .text-info {
-  color: #1bbc9b !important;
+  color: #1bbc9b;
 }
 
 .text-danger {
-  color: #e64c66 !important;
+  color: #e64c66;
 }
 
 .text-default {
-  color: #aeaeae !important;
+  color: #aeaeae;
 }
 
 .text-light {
-  color: #d9e9e8 !important;
+  color: #d9e9e8;
 }
 
 .text-dark {
-  color: #1a1a1a !important;
+  color: #1a1a1a;
 }
 
 .text-white {
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 .text-black {
-  color: #000000 !important;
+  color: #000000;
 }
 
 .text-link {
-  color: #1b89bc !important;
+  color: #1b89bc;
 }
 
 /* BACKGROUND UTILS */
