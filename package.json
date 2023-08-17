@@ -19,6 +19,7 @@
     "nodemon": "^2.0.21"
   },
   "dependencies": {
+    "dotenv": "^16.3.1",
     "jwt-decode": "^3.1.2"
   }
 }
