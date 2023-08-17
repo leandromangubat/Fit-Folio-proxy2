@@ -17,9 +17,9 @@ const WorkoutList = ({ workouts = [] }) => {
         {workouts &&
           workouts.map((workout) => (
             <div key={workout._id} className="col-12 mb-3 pb-3">
-              <div className="p-3 bg-dark text-light">
+              <div className="p-3 bg-white text-dark text-transform-uppercase;">
                 <h5 className="card-header">
-                  {workout.workoutAuthor} created
+                  {workout.workoutAuthor} created <br></br>
                   <span style={{ fontSize: "0.825rem" }}>
                     on {workout.createdAt}
                   </span>
