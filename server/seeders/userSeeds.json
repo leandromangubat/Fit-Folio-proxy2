@@ -1,0 +1,52 @@
+[
+  {
+    "username": "Sun Tzu",
+    "email": "suntzu@email.com",
+    "password": "password"
+  },
+  {
+    "username": "Zenobia Palmyrene",
+    "email": "zenobiapalmyrene@email.com",
+    "password": "password"
+  },
+  {
+    "username": "Marcus Aurelius",
+    "email": "marcusaurelius@email.com",
+    "password": "password"
+  },
+  {
+    "username": "Bruce Lee",
+    "email": "brucelee@email.com",
+    "password": "password"
+  },
+  {
+    "username": "Chuck Norris",
+    "email": "chucknorris@email.com",
+    "password": "password"
+  },
+  {
+    "username": "Augustus Ceasar",
+    "email": "augustusceasar@email.com",
+    "password": "password"
+  },
+  {
+    "username": "Teddy Roosevelt",
+    "email": "theodoreroosevelt@email.com",
+    "password": "password"
+  },
+  {
+    "username": "Miyamoto Musashi",
+    "email": "miyamotomusashi@email.com",
+    "password": "password"
+  },
+  {
+    "username": "Fu Hao",
+    "email": "fuhao@email.com",
+    "password": "password"
+  },
+  {
+    "username": "Tomyris Massagetae",
+    "email": "tomyrismassagetae@email.com",
+    "password": "password"
+  }
+]
